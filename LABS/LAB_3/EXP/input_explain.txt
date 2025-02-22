@@ -1,0 +1,7 @@
+5 3   -->  Number of processes (5) and resources (3)
+10 5 7   --> Available resources (A=10, B=5, C=7)
+0 1 0 7 5 3   --> Process T0: Allocation(0 1 0) | Max(7 5 3)
+2 0 0 3 2 2   --> Process T1: Allocation(2 0 0) | Max(3 2 2)
+3 0 2 9 0 2   --> Process T2: Allocation(3 0 2) | Max(9 0 2)
+2 1 1 2 2 2   --> Process T3: Allocation(2 1 1) | Max(2 2 2)
+0 0 2 4 3 3   --> Process T4: Allocation(0 0 2) | Max(4 3 3)

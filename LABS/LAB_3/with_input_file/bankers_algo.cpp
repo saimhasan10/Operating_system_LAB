@@ -61,7 +61,6 @@ bool isSafe()
     return true;
 }
 
-// Function to read input from a file
 void readInputFromFile(string filename)
 {
     ifstream infile(filename);
@@ -71,14 +70,11 @@ void readInputFromFile(string filename)
         exit(1);
     }
 
-    // Read P (Processes) and R (Resources)
     infile >> P >> R;
 
-    // Read Available resources
     for (int i = 0; i < R; i++)
         infile >> available[i];
 
-    // Read Allocation and Max matrices
     for (int i = 0; i < P; i++)
     {
         for (int j = 0; j < R; j++)
@@ -89,7 +85,6 @@ void readInputFromFile(string filename)
 
     infile.close();
 
-    // Compute Need matrix: Need = Max - Allocation
     for (int i = 0; i < P; i++)
         for (int j = 0; j < R; j++)
             need[i][j] = maxRes[i][j] - allocation[i][j];
@@ -97,10 +92,8 @@ void readInputFromFile(string filename)
 
 int main()
 {
-    // Read input from file
     readInputFromFile("input.txt");
 
-    // Run the safety algorithm
     isSafe();
 
     return 0;
